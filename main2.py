@@ -398,4 +398,3 @@ class Coach:
 if __name__ == "__main__":
     main()
 
-# ...existing code... (Coach, SDNet, GCNModel, etc. doivent rester dans le fichier)
