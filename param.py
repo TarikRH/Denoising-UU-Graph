@@ -55,12 +55,10 @@ def parse_args():
     parser.add_argument('--sampling_steps', type=int, default=10, help='steps of the forward process during inference')
     parser.add_argument('--reweight', type=bool, default=True, help='assign different weight to different timestep or not')
 
-    # Gérer les erreurs de parsing dans les notebooks
+    # Handle parsing errors depending on the notebook used (.ipynb or .py)
     if "__file__" not in globals():
-        # On est dans un notebook Jupyter, on ignore les arguments CLI
         args, _ = parser.parse_known_args([])
     else:
-        # On est dans un script .py, on utilise les arguments CLI
         args = parser.parse_args()
 
     return args
